@@ -1,28 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User, auth
+from django.contrib import messages
 from .models import swip
-from .models import about_section
 from .models import testimonial_section
+from .models import about_section
 def index(request):
     swp=swip()
-    swp.name = 'Pouya Hosseini'
+    swp.name = 'Hello World'
     swp.text = "I'm working on this"
     return render(request,'index.html',{'swp':swp})
 def services(request):
-    return render(request,'services.html',) #{'in_html':in_def}
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user= auth.authenticate(username=username,password=password)
+        if user is not None:
+            auth.login(request,user)
+            return redirect ('/services')
+        else:
+            messages.info(request,'Invalid username or password')
+            return redirect ('/accounts/logsin')
+    else:
+        return render(request,'services.html')
 def about(request):
-    abt=about_section()
-    abt.text="Hello, my name is Mehrzad. I'm currently working on this"
-    abt.intro="I'm learning django"
-    abt.jobtitle="Petroleum Engineering"
-    abt.birthday="27 Nov 1995"
-    abt.website="www.linkedin.com/in/merzaad"
-    abt.phone='09221087066'
-    abt.city='Karaj'
-    abt.age='26'
-    abt.degree='Bachelor'
-    abt.email='merzaad@gmail.com'
-    abt.freelance='Available'
-    abt.summary='no summary'
+    abt=about_section.objects.get(id=1) #.all() complete table
     tsti1=testimonial_section()
     tsti1.name = 'Jean Paul'
     tsti1.jobtitle='Designer'
@@ -34,5 +35,4 @@ def about(request):
     tsti2.quote='Who the ef in the world?'
     tsti2.img='testimonials-1.jpg'
     tsts=[tsti1,tsti2]
-
-    return render(request,'about.html',{'tsts':tsts,'abt':abt})
+    return render(request,'about.html',{'abt':abt,'tsts':tsts})
