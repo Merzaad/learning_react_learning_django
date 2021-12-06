@@ -1,1 +1,1 @@
-# I'm learhing Django
+# My first django
