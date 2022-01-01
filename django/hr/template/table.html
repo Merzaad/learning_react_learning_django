@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Individuals</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">Individuals</h2>
+      
+
+      <div class="table-responsive">
+
+          <table class="table table-striped custom-table">
+              <thead>
+                  <tr>
+
+                      <th scope="col">Id</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Jobtitle</th>
+                      <th scope="col">Education</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">Email</th>
+                      <th scope="col"></th>
+                  </tr>
+              </thead>
+              
+              <tbody>
+                  {% for i in tbl %}
+                  <tr scope="row">
+                  <tr>
+
+                      <td>{{i.id}}</td>
+                      <td>{{i.first_name}} {{i.last_name}}</td>
+                      <td>{{i.jobtitle}}</td>
+                      <td>{{i.education}}</td>
+                      <td> {{i.phone}}</td>
+                      <td>{{i.email}}</td>
+                      <td><a href="#" class="more">Details</a></td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+              
+          </table>
+      </div>
+
+
+    </div>
+
+  </div>
+    
+    
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
