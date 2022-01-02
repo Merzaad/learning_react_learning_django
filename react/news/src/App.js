@@ -39,13 +39,13 @@ function App() {
             img: "img5.jpg"
         },
     ];
-    function post() {
+    function Post() {
         let a = [];
         for (let i of post_box) {
             if (i.tag != "ad") {
                 a.push(
                     <a href="#" class="lnk">
-                        <div className="card" >
+                        <div className="card rounded-3 my-4 " >
                             <img src={i.img} className=" card-image-top w-100 mb-3" />
                             <div className="card-body">
                                 <p className="h2">{i.title}</p>
@@ -64,12 +64,12 @@ function App() {
             </div>
             )
     };
-    function ad() {
+    function Ad() {
         let a = [];
         for (let i of post_box) {
             if (i.tag == "ad") {
                 a.push(
-                    <div className="p-4 my-5 shadow-lg " >
+                    <div className=" p-3 m-3 my-5 shadow-lg rounded-3 " >
                         <a className="position-absolute" href="#"><span className="badge bg-secondary mx-2"><span className="tag">{i.tag}</span></span></a>
                         <a href="#" class="lnk"><p className="h5 pb-2"> <img src={i.img} className=" w-100 mb-3" />{i.title}</p></a>
                     </div>
@@ -77,31 +77,34 @@ function App() {
             }
         }
         return (
-            <div>
+            <div className="sticky-top ">
                 {a}
             </div>
         )
     };
-    function top() {
+    function Top() {
         let a = [];
         for (let i of post_box) {
             if (i.tag == "awards") {
                 a.push(
-                    <div className="p-4 my-5 shadow-lg " >
+                    
+                    <div className="p-3 m-3 my-5 shadow-lg rounded-3" >
                         <a className="position-absolute" href="#"><span className="badge bg-secondary mx-2"><span className="tag">{i.tag}</span></span></a>
                         <a href="#" class="lnk"><p className="h5 pb-2"> <img src={i.img} className=" w-100 mb-3" />{i.title}</p></a>
                     </div>
+                    
                 )
             }
         }
         return (
-            <div>
+            <div className="sticky-top">
                 {a}
+                <Ad />
             </div>
         )
     }
-    ReactDOM.render(post(), document.getElementById('post'));
-    ReactDOM.render(top(), document.getElementById('left'));
-    ReactDOM.render(ad(), document.getElementById('right'));
+    ReactDOM.render(Post(), document.getElementById('post'));
+    ReactDOM.render(Top(), document.getElementById('left'));
+    ReactDOM.render(Ad(), document.getElementById('right'));
 };
 export default App;
