@@ -11,6 +11,13 @@ function App() {
             img: "img1.jpg"
         },
         {
+            text: "President Yosuke Matsuda acknowledges skeptics, but hopes that blockchain tokens can decentralize gaming, thanks to modders, with 19 stations and a full integration into the game's UI and controls. It's a nice, slick bit of modding for those who really want an immersive game they can freely explore, and those who detest fast travel systems.",
+            title: "Square Enix president knows people who 'play to have fun' dislike NFTs, but he wants them anyway",
+            update: "January 12, 2022",
+            tag: "news",
+            img: "img6.jpg"
+        },
+        {
             text: "Kill bizarre demons and use their blood as paint in mad roguelike Brutal Orchestra",
             title: "Kill bizarre demons and use their blood as paint in mad roguelike Brutal Orchestra ",
             update: "January 13, 2022",
@@ -31,6 +38,7 @@ function App() {
             tag: "awards",
             img: "img4.jpg"
         },
+
         {
             text: "If you were ever frustrated that Night City's NCART system didn't work, well, Cyberpunk 2077 modders have got you covered. The sprawling metropolis now has a working metro system, thanks to modders, with 19 stations and a full integration into the game's UI and controls. It's a nice, slick bit of modding for those who really want an immersive game they can freely explore, and those who detest fast travel systems.",
             title: "Cyberpunk 2077 gets a metro thanks to modders",
@@ -102,9 +110,18 @@ function App() {
                 <Ad />
             </div>
         )
-    }
+    };
+    function btn() {
+        function test() {
+            document.getElementById('left').classList.add('p-5')
+        }
+        return (
+            <button class="btn w-100 bg-dark text-white" onClick={test}>Press</button>
+            )
+    };
     ReactDOM.render(Post(), document.getElementById('post'));
     ReactDOM.render(Top(), document.getElementById('left'));
     ReactDOM.render(Ad(), document.getElementById('right'));
+    ReactDOM.render(btn(), document.getElementById('btn'));
 };
 export default App;
