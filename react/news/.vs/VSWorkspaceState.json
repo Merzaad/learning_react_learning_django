@@ -3,8 +3,8 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\news"
+    "\\src\\apps"
   ],
-  "SelectedNode": "\\public\\index.html",
+  "SelectedNode": "\\src\\apps\\Home.js",
   "PreviewInSolutionExplorer": false
 }
