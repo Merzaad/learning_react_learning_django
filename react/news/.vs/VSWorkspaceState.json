@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\news"
   ],
   "SelectedNode": "\\public\\index.html",
   "PreviewInSolutionExplorer": false
