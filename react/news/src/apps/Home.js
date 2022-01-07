@@ -1,4 +1,4 @@
-import './Home.css';
+import './css/Home.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import database from './Database.js'
@@ -31,7 +31,7 @@ function Home() {
             </div>
             )
     };
-    function sidebar(x) {
+    function card(x) {
         let a = [];
         for (let i of post_box) {
             if (i.tag == x) {
@@ -59,8 +59,7 @@ function Home() {
             )
     };
     ReactDOM.render(post(), document.getElementById('post'));
-    ReactDOM.render(sidebar("awards"), document.getElementById('left'));
-    ReactDOM.render(sidebar("ad"), document.getElementById('right'));
+    ReactDOM.render(card("ad"), document.getElementById('right'));
     ReactDOM.render(btn(), document.getElementById('btn'));
 };
 
