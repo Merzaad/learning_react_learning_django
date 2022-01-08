@@ -11,7 +11,7 @@ function Home() {
         for (let i of post_box) {
             if (i.tag !== "ad") {
                 a.push(
-                    <a href="#" class="lnk">
+                    <a href="#" className="lnk">
                         <div className="card rounded-3 my-4 " >
                             <img src={i.img} className=" card-image-top w-100 mb-3" />
                             <div className="card-body">

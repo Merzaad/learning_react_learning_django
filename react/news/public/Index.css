@@ -18,11 +18,10 @@
         border-inline-color: #85FFBD;
         border-inline-width: 1px;
         padding: 10px;
-        
-        transition: padding 1s;
+        transition: padding 0.5s;
     }
         .sidebar a:hover:not(.active) {
-            padding: 20px;
+            padding: 15px;
             color: #85FFBD;
         }
 
@@ -61,6 +60,21 @@
     position: fixed;
     bottom: 0;
 }
+.t-btn {
+    text-align:center;
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+}
+
+    .t-btn a {
+        display: block;
+        background-color: #85FFBD;
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        border-start-start-radius: 5px;
+    }
 
 .movingtext {
     color: black;
