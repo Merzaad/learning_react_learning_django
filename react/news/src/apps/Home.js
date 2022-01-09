@@ -1,9 +1,8 @@
-import './css/Home.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import database from './Database.js'
+import Database from './database.js'
 
-var post_box = database()
+var post_box = Database()
 
 function Home() {
     function post() {
@@ -11,7 +10,7 @@ function Home() {
         for (let i of post_box) {
             if (i.tag !== "ad") {
                 a.push(
-                    <a href="#" className="lnk">
+                    <a href="#" id="test" className="lnk">
                         <div className="card rounded-3 my-4 " >
                             <img src={i.img} className=" card-image-top w-100 mb-3" />
                             <div className="card-body">
@@ -49,18 +48,8 @@ function Home() {
             </>
         )
     };
-    function btn() {
-        function padd() {
-            document.getElementById('left').classList.add('p-5')
-            document.getElementById('right').classList.add('p-5')
-        }
-        return (
-            <button id='btn' className="btn bg-dark text-white" onClick={padd}>sidebars padding</button>
-            )
-    };
     ReactDOM.render(post(), document.getElementById('post'));
     ReactDOM.render(card("ad"), document.getElementById('right'));
-    ReactDOM.render(btn(), document.getElementById('btn'));
 };
 
 export default Home;

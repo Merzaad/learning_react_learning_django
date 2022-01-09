@@ -1,4 +1,4 @@
-function database() {
+function Database() {
     let db = [
         {
             text: "For less than $300 you're getting one of our favorite gaming monitors of 2021, and a mighty impressive specsheet to boot. The sprawling metropolis now has a working metro system, thanks to modders, with 19 stations and a full integration into the game's UI and controls. It's a nice, slick bit of modding for those who really want an immersive game they can freely explore, and those who detest fast travel systems.",
@@ -42,8 +42,22 @@ function database() {
             tag: "awards",
             img: "img5.jpg"
         },
+        {
+            text: "Some new additions to the Radeon RX 6000S series, and the RX 6000M is getting a refresh.",
+            title: "AMD unveils new Radeon RX 6000S and RX 6000M GPUs for gaming laptops",
+            update: "January 2, 2022",
+            tag: "ad",
+            img: "img8.jpg"
+        },
+        {
+            text: "Another challenger strives for the co-op FPS throne.",
+            title: "Rainbow Six Extraction is a pleasant surprise, but is that enough?",
+            update: "January 1, 2022",
+            tag: "news",
+            img: "img7.jpg"
+        },
     ];
     return (db);
 }
 
-export default database
+export default Database
