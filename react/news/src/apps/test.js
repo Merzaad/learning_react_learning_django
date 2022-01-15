@@ -11,7 +11,6 @@ function TestBtn() {
             let a=new co("m", "h");
             return a.fullname()
         }
-
         function sum(...args) {
             let a = 'HEllo'
             for (let i of args) {
@@ -24,10 +23,11 @@ function TestBtn() {
             }
             
         };
-        sum("i said hello","i said no")
+        for (let i = 0; i < 1; i++) {
+            sum("i said hello", "i said no")
+        }
     
-        document.getElementById('right').classList.add('p-5')
-         
+        document.getElementById('right').classList.add('p-5')  
     }
     return (
         <button id='btn' className="btn bg-dark text-white" onClick={padd}>console</button>
