@@ -1,4 +1,4 @@
-.container{
+.navbar{
     display:flex;
     flex-direction:column;
     margin:auto;
@@ -102,7 +102,7 @@
 .App {
     text-align: center;
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: 850px){
     .sidebar {
         position:relative;
         height:auto;
