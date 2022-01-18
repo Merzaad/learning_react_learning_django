@@ -1,3 +1,8 @@
+.container{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+}
 .sidebar {
     width: 20%;
     height: 100%;
@@ -5,7 +10,8 @@
     top: 0;
     left: 0;
     background-color: black;
-    z-index:1
+    z-index:1;
+    display:flex;
 }
     .sidebar a {
         text-align: center;
@@ -44,7 +50,6 @@
     padding:20px;
     
 }
-
 .logo {
     color: #FFFB7D;
     margin-top: 20px;
@@ -66,7 +71,6 @@
     bottom: 5%;
     right: 0%;
 }
-
     .t-btn a {
         display: block;
         background-color: #85FFBD;
@@ -75,7 +79,6 @@
         padding: 5px;
         border-start-start-radius: 5px;
     }
-
 .movingtext {
     color: black;
     margin:5px;
@@ -86,25 +89,19 @@
     color: black;
     text-decoration: none;
 }
-
     .lnk:hover {
         color: springgreen;
     }
-
 .tag {
     color: white;
     text-decoration: none;
 }
-
     .tag:hover {
         color: springgreen
     }
-
-
 .App {
     text-align: center;
 }
-
 @media screen and (max-width: 700px){
     .sidebar {
         position:relative;

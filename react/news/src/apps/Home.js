@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Database from './database.js'
+import Database from './database'
+import Sidebar from './sidebar'
+import Testform from './test'
 
 var post_box = Database()
 
@@ -50,6 +52,9 @@ function Home() {
     };
     ReactDOM.render(post(), document.getElementById('post'));
     ReactDOM.render(card("ad"), document.getElementById('right'));
+    ReactDOM.render(Sidebar(), document.getElementById('left'));
+    ReactDOM.render(<Testform/>, document.getElementById('form'));
+
 };
 
 export default Home;

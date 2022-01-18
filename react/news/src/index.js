@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './apps/home';
-import Sidebar from './apps/sidebar'
-import TestBtn from './apps/test'
 
-export default function Mainbar() {
+export default function Index() {
     return (
         <BrowserRouter>
             <Routes>
@@ -18,8 +16,8 @@ export default function Mainbar() {
     );
 }
 
-ReactDOM.render(Mainbar(), document.getElementById('root'));
-ReactDOM.render(Sidebar(), document.getElementById('root'));
-ReactDOM.render(TestBtn(), document.getElementById('btn'));
+ReactDOM.render(Index(), document.getElementById('root'));
+
+
 
 
