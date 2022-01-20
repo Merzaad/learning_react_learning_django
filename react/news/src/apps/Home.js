@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Database from './database'
-import Testform from './reUseable/test'
+import Testform from './reUseable/testForm'
 import Card from './reUseable/card'
 import Post from './reUseable/post'
 
