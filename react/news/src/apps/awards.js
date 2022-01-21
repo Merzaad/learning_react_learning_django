@@ -6,8 +6,8 @@ import Testform from './reUseable/testForm';
 
 var post_box = Database()
 function Awards() {
-    ReactDOM.render(Post("news", post_box), document.getElementById('post'));
-    ReactDOM.render(Post("ad", post_box), document.getElementById('right'));
+    ReactDOM.render(<Post tag="ad" database={post_box} />, document.getElementById('post'));
+    ReactDOM.render(<Post tag="news" database={post_box} />, document.getElementById('right'));
     ReactDOM.render(<Testform />, document.getElementById('form'));
     return (<></>)
 };

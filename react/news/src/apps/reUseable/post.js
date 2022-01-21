@@ -1,7 +1,7 @@
-function Post(x,y) {
+function Post(props) {
     let a = [];
-    for (let i of y) {
-        if (i.tag !== x) {
+    for (let i of props.database) {
+        if (i.tag !== props.tag) {
             a.push(
                 <a href="#" id="test" className="lnk">
                     <div className="card rounded-3 my-4 " >

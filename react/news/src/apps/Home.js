@@ -8,8 +8,8 @@ import Post from './reUseable/post'
 var post_box = Database()
 
 function Home() {
-    ReactDOM.render(Post("ad",post_box), document.getElementById('post'));
-    ReactDOM.render(Card("ad",post_box), document.getElementById('right'));
+    ReactDOM.render(<Post tag="ad" database={post_box}/>, document.getElementById('post'));
+    ReactDOM.render(<Card tag="ad" database={post_box} />, document.getElementById('right'));
     ReactDOM.render(<Testform />, document.getElementById('form'));
     return(<></>)
 };
