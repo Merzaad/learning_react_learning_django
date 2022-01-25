@@ -9,7 +9,7 @@ function Awards() {
     ReactDOM.render(<Post tag="ad" database={post_box} />, document.getElementById('post'));
     ReactDOM.render(<Post tag="news" database={post_box} />, document.getElementById('right'));
     ReactDOM.render(<Testform />, document.getElementById('form'));
-    return (<></>)
+    return null
 };
 
 export default Awards;

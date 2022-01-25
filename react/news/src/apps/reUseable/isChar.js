@@ -1,19 +1,12 @@
-function IsChar(...a) {
-    const letters = /^[A-Za-z]+$/;
-    const x = {
-        is: false,
-        falsedata: 'nothing',
+function IsChar(a) {
+    const letters = /[A-Za-z]+$/;
+    const x = { is: false, errIn: 'nothing' };
+    if (a.match(letters)) {
+        x.is = true;
+    }
+    else {
+        x.errIn = `must be letters`
     };
-    for (let i of a) {
-        if (i.match(letters)) {
-            x.is = true;
-        }
-        else {
-            x.is = false;
-            x.falsedata = i;
-            break;
-        };
-    };
-    return x;
+    return x
 };
 export default IsChar
