@@ -1,3 +1,6 @@
+
+<a href="https://github.com/Merzaad/learning_django_react/tree/main/react/news"><img src="https://i.postimg.cc/D0ypVqG5/Web-capture-8-1-2022-7341-localhost.jpg"></a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
