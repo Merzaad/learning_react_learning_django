@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import IsChar from './isChar';
+import IsLet from './isLet';
 function Testform() {
     const [name, setName] = useState("");
     function validation(event) {
-        const isCharName = IsChar(name);
-        if (isCharName.is) {
-            alert(`Name: ${name}`);
+        const IsLetName = IsLet(name);
+        if (IsLetName.is) {
+            alert(`input: ${name}`);
         }
         else {
             event.preventDefault();
-            alert(`name error: ${isCharName.errIn}`);
+            alert(` error: ${IsLetName.errIn}`);
         }
     }
     return (
