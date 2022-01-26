@@ -1,8 +1,9 @@
 function IsLet(a) {
     const letters = /^[A-Za-z]+$/;
-    const x = { is: false, errIn: 'nothing' };
+    const x = { is: false, errIn: 'initial' };
     if (a.match(letters)) {
-        x.does = true;
+        x.is = true;
+        x.errIn = 'nothing'
     }
     else {
         x.errIn = `must be letters`
