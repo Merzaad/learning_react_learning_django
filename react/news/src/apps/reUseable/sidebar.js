@@ -23,8 +23,8 @@ function Sidebar() {
                     </div>
                 </div>
             </div>
-            <Outlet/>
+            <Outlet />
         </div>
-    )
+    );
 }
-export default Sidebar
+export default Sidebar;

@@ -10,7 +10,7 @@ function Testform() {
         else {
             event.preventDefault();
             alert(` error: ${IsLetName.errIn}`);
-        }
+        };
     }
     return (
         <form onSubmit={validation} target="_self">
@@ -26,4 +26,4 @@ function Testform() {
         </form>
         );
 };        
-export default Testform
+export default Testform;

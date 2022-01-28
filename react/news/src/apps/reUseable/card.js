@@ -7,13 +7,13 @@ function Card(props) {
                     <a className="position-absolute" href="#"><span className="badge bg-secondary mx-2"><span className="tag">{i.tag}</span></span></a>
                     <a href="#" class="lnk"><p className="h5 pb-2"> <img src={i.img} className=" w-100 mb-3" />{i.title}</p></a>
                 </div>
-            )
-        }
-    }
+            );
+        };
+    };
     return (
         <>
             {a}
         </>
     )
 };
-export default Card
+export default Card;

@@ -8,6 +8,6 @@ function IsLet(a) {
     else {
         x.errIn = `must be letters`
     };
-    return x
+    return x;
 };
-export default IsLet
+export default IsLet;

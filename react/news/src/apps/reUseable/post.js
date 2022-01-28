@@ -14,13 +14,13 @@ function Post(props) {
                         </div>
                     </div>
                 </a>
-            )
-        }
-    }
+            );
+        };
+    };
     return (
         <div>
             {a}
         </div>
-    )
+    );
 };
-export default Post
+export default Post;
