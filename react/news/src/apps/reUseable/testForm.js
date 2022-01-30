@@ -1,28 +1,38 @@
 import { useState } from 'react';
 import IsLet from './isLet';
 function Testform() {
-    const [name, setName] = useState("");
+    const [name, setName] = useState('name');
+    const [lastname, setLastname] = useState('lastname');
     function validation(event) {
         const IsLetName = IsLet(name);
-        if (IsLetName.is) {
-            alert(`input: ${name}`);
+        const IsLetLastname = IsLet(lastname);
+        if (IsLetName.is && IsLetLastname.is) {
+            alert(`input: ${name +' '+ lastname}`);
         }
         else {
             event.preventDefault();
-            alert(` error: ${IsLetName.errIn}`);
+            alert(` name err: ${IsLetName.errIn} lastname err: ${IsLetLastname.errIn}`);
         };
     }
     return (
-        <form onSubmit={validation} target="_self">
+        <form onSubmit={validation} target="_self" style={{display:'flex', justifyContent:'center', gap:'5px'}}>
             <label>
-                <span>Input: </span>
+                <span>Name </span>
                 <input
                     type='text'
-                    placeholder="test"
-                    input={name}
-                    onChange={(x) => setName(x.target.value)} />
+                    value={name}
+                    onChange={(e) => setName(e.target.value)} />
             </label>
-            <input type="submit" value="Submit"/>
+            <label>
+                <span>Lastname</span>
+                <input
+                    type='text'
+                    value={lastname}
+                    onChange={(e) => setLastname(e.target.value)}
+                />
+            </label>
+            <input type="submit" value="Submit" />
+            <span>{name+" "+lastname}</span>
         </form>
         );
 };        
