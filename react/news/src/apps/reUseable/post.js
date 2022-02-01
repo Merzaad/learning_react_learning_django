@@ -3,7 +3,7 @@ function Post(props) {
     for (let i of props.database) {
         if (i.tag !== props.tag) {
             a.push(
-                <a href="#" id="test" className="lnk">
+                <div href="#" id="test" className="lnk">
                     <div className="card rounded-3 my-4 " >
                         <img src={i.img} className=" card-image-top w-100 mb-3" />
                         <div className="card-body">
@@ -13,7 +13,7 @@ function Post(props) {
                             <br />
                         </div>
                     </div>
-                </a>
+                </div>
             );
         };
     };

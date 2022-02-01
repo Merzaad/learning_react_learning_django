@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import IsLet from './isLet';
 function Testform() {
-    const [name, setName] = useState();
-    const [lastname, setLastname] = useState();
+    const [name, setName] = useState(()=>'');
+    const [lastname, setLastname] = useState(() => '');
     function validation(event) {
         const IsLetName = IsLet(name);
         const IsLetLastname = IsLet(lastname);
@@ -28,11 +28,12 @@ function Testform() {
                 <input
                     type='text'
                     value={lastname}
-                    onChange={(e) => setLastname(e.target.value)}
+                    onChange={(e) => {setLastname(e.target.value)}}
                 />
             </label>
-            <input type="submit" value="Submit" disabled={ false} />
-            { ( name || lastname) && <span>{name + " " + lastname}</span> }
+            <input type="submit" value="Submit" disabled={false} />
+            {(name || lastname) && <span>{name + " " + lastname}</span>}
+            { }
         </form>
         );
 };        
