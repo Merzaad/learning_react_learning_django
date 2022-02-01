@@ -5,12 +5,14 @@ import News from './apps/news';
 import Offers from './apps/offers';
 import Awards from './apps/awards';
 import Sidebar from './apps/reUseable/sidebar';
+import { useRef } from 'react'
 
 export default function Index() {
+    const sb = useRef(); // no way! 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Sidebar />}>
+                <Route ref={sb} path="/" element={<Sidebar />}>
                     <Route index element={<News />} />
                     <Route path="awards" element={<Awards />} />
                     <Route path="offers" element={<Offers />} />
@@ -21,16 +23,3 @@ export default function Index() {
 }
 ReactDOM.render(<Index/>, document.getElementById('root'));
 
-
-/*
-     <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Sidebar />}>
-                    <Route index  element={<Home />} />
-                    <Route path="awards" element={<Awards />} />
-                    <Route path="offers" element={<Offers />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-
-*/
