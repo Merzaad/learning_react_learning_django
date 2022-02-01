@@ -9,15 +9,15 @@ function Sidebar() {
                         <h1>NEWS</h1>
                     </div>
                     <div className="sb-items">
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
+                        <ul> 
+                            <li> 
                                 <Link to="/">News</Link>
                             </li>
                             <li>
-                                <Link to="/awards" targer="_blank">Awards</Link>
+                                <Link to="/offers" target="_self">Offers</Link>
+                            </li>
+                            <li>
+                                <Link to="/awards" target="_self">Awards</Link>
                             </li>
                         </ul>
                     </div>
@@ -28,3 +28,5 @@ function Sidebar() {
     );
 }
 export default Sidebar;
+
+// does nav bar list need key?

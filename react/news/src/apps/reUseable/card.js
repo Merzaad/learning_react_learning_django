@@ -1,7 +1,7 @@
 function Card(props) {
     let a = [];
     for (let i of props.database) {
-        if (i.tag == props.tag) {
+        if (i.tag === props.tag) {
             a.push(
                 <div key={i.id} className=" p-3 m-3 mb-5 shadow-lg rounded-3 " >
                     <a className="position-absolute" href="#"><span className="badge bg-secondary mx-2"><span className="tag">{i.tag}</span></span></a>

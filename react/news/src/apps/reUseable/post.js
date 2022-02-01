@@ -1,9 +1,9 @@
 function Post(props) {
     let a = [];
     for (let i of props.database) {
-        if (i.tag !== props.tag) {
+        if (i.tag === props.tag) {
             a.push(
-                <div href="#" key={i.id} id="test" className="lnk">
+                <div href="#" key={i.id}  className="lnk">
                     <div className="card rounded-3 my-4 " >
                         <img src={i.img} className=" card-image-top w-100 mb-3" />
                         <div className="card-body">

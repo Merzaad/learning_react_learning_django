@@ -1,14 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Database from './database';
 import Testform from './reUseable/testForm';
 import Card from './reUseable/card';
 import Post from './reUseable/post';
-import Sidebar from './reUseable/sidebar'
+
 
 var post_box = Database();
 
-function Home() {
+function Offers() {
     return (
      <>
         <div >
@@ -25,7 +24,7 @@ function Home() {
                     </div>
                     <div className="col-lg-6 p-0">
                         <div>
-                            <Post tag="ad" database={post_box} />
+                            <Post tag="offers" database={post_box} />
                         </div>
                     </div>
                     <div className="col-lg-3 P-0 ">
@@ -39,4 +38,4 @@ function Home() {
     )
 };
 
-export default Home;
+export default Offers;
