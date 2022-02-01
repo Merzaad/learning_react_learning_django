@@ -1,9 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import { useRef } from 'react'
 
 function Sidebar() {
+    const sb = useRef(); // no way! 
     return (
         <div>
-            <div className="sidebar">
+            <div ref={ sb} className="sidebar">
                 <div className="navbar">
                     <div className="logo">
                         <h1>NEWS</h1>
@@ -29,4 +31,4 @@ function Sidebar() {
 }
 export default Sidebar;
 
-//  key
+//  key?
