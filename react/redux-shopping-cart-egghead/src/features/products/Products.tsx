@@ -1,36 +1,47 @@
 import React, { useEffect, useState } from "react";
+import { useAppSelector, useAppDispatch} from '../../app/hook'
 import { getProducts, Product } from "../../app/api";
 import styles from "./Products.module.css";
+import { receivedProducts } from './productSlice'
+import {addToCart} from '../cart/cartSlice'
 
 export function Products() {
-  const [products, setProducts] = useState<Product[]>([]);
-  useEffect(() => {
-    getProducts().then((products) => {
-      setProducts(products);
-    });
-  }, []);
-  return (
+    const dispatch = useAppDispatch()
+    const products = useAppSelector((state) => state.products.products)
+    useEffect(() => {
+        getProducts().then((products) => {
+            dispatch(receivedProducts(products))
+        })
+    })
+    return (
     <main className="page">
-      <ul className={styles.products}>
-        {products.map((product) => (
-          <li key={product.id}>
+        <ul className={styles.products}>
+        {Object.values(products).map((product) => (
+            <li key={product.id}>
             <article className={styles.product}>
-              <figure>
+                <figure>
                 <img src={product.imageURL} alt={product.imageAlt} />
                 <figcaption className={styles.caption}>
-                  {product.imageCredit}
+                    {product.imageCredit}
                 </figcaption>
-              </figure>
-              <div>
+                </figure>
+                <div>
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
-                <p>${product.price}</p>
-                <button>Add to Cart 🛒</button>
-              </div>
+                        <p>${product.price}</p>
+                        <button onClick={() => dispatch(addToCart(product.id))}>Add to Cart 🛒</button>
+                </div>
             </article>
-          </li>
+            </li>
         ))}
-      </ul>
+        </ul>
     </main>
-  );
+    );
 }
+
+/* const [products, setProducts] = useState<Product[]>([]);
+   useEffect(() => {
+     getProducts().then((products) => {
+       setProducts(products);
+     });
+   }, [])*/
