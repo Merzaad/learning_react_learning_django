@@ -4,9 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\features",
-    "\\src\\features\\cart",
-    "\\src\\features\\products"
+    "\\src\\features\\cart"
   ],
-  "SelectedNode": "\\src\\app\\api.ts",
+  "SelectedNode": "\\src\\features\\cart\\CartLink.tsx",
   "PreviewInSolutionExplorer": false
 }

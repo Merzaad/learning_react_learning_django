@@ -9,10 +9,10 @@ export function Products() {
     const dispatch = useAppDispatch()
     const products = useAppSelector((state) => state.products.products)
     useEffect(() => {
-        getProducts().then((products) => {
-            dispatch(receivedProducts(products))
+        getProducts().then((x) => {
+            dispatch(receivedProducts(x))
         })
-    })
+    },[])
     return (
     <main className="page">
         <ul className={styles.products}>
